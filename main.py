@@ -43,7 +43,6 @@ while True:
         border = pg.locateOnScreen('AktiviranFull.png', confidence=0.9)
         print("Pomeram za upgrade na [", border.left, ",", border.top, "]")
         pg.moveTo(border.left, border.top)
-        pg.click()
         time.sleep(0.1)
         try:
             new_border = pg.locateOnScreen('klik.png', confidence=0.9)
@@ -53,7 +52,7 @@ while True:
             pass
     except:
         try:
-            golden_border = pg.locateOnScreen('golden_bunny.png',confidence=0.6)
+            golden_border = pg.locateOnScreen('golden_bunny_red.png')
             print("Pomeram za golden na [", golden_border.left, ",", golden_border.top, "]")
             pg.moveTo(golden_border.left, golden_border.top)
             try:
@@ -63,6 +62,6 @@ while True:
             except:
                 pass
         except:
-            print("Nisam nasao Golden Bunnya")
+            pass
 
 click_thread.join()  # Wait for the click thread to finish execution
