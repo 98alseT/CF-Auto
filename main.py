@@ -52,7 +52,7 @@ while True:
             pass
     except:
         try:
-            golden_border = pg.locateOnScreen('golden_bunny_red.png')
+            golden_border = pg.locateOnScreen('golden_bunny_red.png', confidence=1)
             print("Pomeram za golden na [", golden_border.left, ",", golden_border.top, "]")
             pg.moveTo(golden_border.left, golden_border.top)
             try:
